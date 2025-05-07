@@ -505,6 +505,10 @@ _rsync_dependences() {
 _rsync_main_package
 _rsync_dependences
 
+# Add languages (if available)
+rsync -av ./archlinux/.junest/usr/lib/libreoffice/program/* ./"$APP".AppDir/.junest/usr/lib/libreoffice/program/
+rsync -av ./archlinux/.junest/usr/lib/libreoffice/share/* ./"$APP".AppDir/.junest/usr/lib/libreoffice/share/
+
 #############################################################################
 #	REMOVE BLOATWARES, ENABLE MOUNTPOINTS
 #############################################################################
