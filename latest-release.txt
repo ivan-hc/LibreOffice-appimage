@@ -1,2 +1,2 @@
 https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still_24.8.6-4-archimage4.3-x86_64.AppImage
-https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh_25.2.3-2-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh_25.2.3-3-archimage4.3-x86_64.AppImage
