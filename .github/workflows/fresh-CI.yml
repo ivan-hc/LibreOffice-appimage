@@ -34,25 +34,21 @@ jobs:
         mv *AppImage* dist/ || exit 1
         
         # Create "LibreOffice italian"
-        sed -i 's/^#add_italian/add_italian/g' ./libreoffice-junest.sh
         export LOLP="italian"
         ./libreoffice-junest.sh
         mv *AppImage* dist/ || exit 1
                 
         # Create "LibreOffice european"
-        sed -i 's/^#add_european/add_european/g' ./libreoffice-junest.sh
         export LOLP="european"
         ./libreoffice-junest.sh
         mv *AppImage* dist/ || exit 1
                 
         # Create "LibreOffice standard"
-        sed -i 's/^#add_standard/add_standard/g' ./libreoffice-junest.sh
         export LOLP="standard"
         ./libreoffice-junest.sh
         mv *AppImage* dist/ || exit 1
                 
         # Create "LibreOffice all"
-        sed -i 's/^#add_all/add_all/g' ./libreoffice-junest.sh
         export LOLP="all"
         ./libreoffice-junest.sh
         mv *AppImage* dist/ || exit 1
