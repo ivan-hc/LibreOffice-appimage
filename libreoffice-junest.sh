@@ -6,9 +6,16 @@
 # Determine if language pack set is "base", "standard" or "full"
 [ -z "$LOLP" ] && LOLP="base"
 
+# Language packs
+#add_italian="libreoffice-it"
+#add_european="libreoffice-en-gb libreoffice-fr libreoffice-de libreoffice-pt libreoffice-es"
+#add_standard="libreoffice-ar libreoffice-zh-cn libreoffice-zh-tw libreoffice-ja libreoffice-ko libreoffice-pt-br libreoffice-ru"
+#add_all="libreoffice-af libreoffice-am libreoffice-as libreoffice-ast libreoffice-be libreoffice-bg libreoffice-bn libreoffice-bn-in libreoffice-bo libreoffice-br libreoffice-brx libreoffice-bs libreoffice-ca libreoffice-ca-valencia libreoffice-ckb libreoffice-cs libreoffice-cy libreoffice-da libreoffice-dgo libreoffice-dsb libreoffice-dz libreoffice-el libreoffice-en-za libreoffice-eo libreoffice-et libreoffice-eu libreoffice-fa libreoffice-fi libreoffice-fur libreoffice-fy libreoffice-ga libreoffice-gd libreoffice-gl libreoffice-gu libreoffice-gug libreoffice-he libreoffice-hi libreoffice-hr libreoffice-hsb libreoffice-hu libreoffice-id libreoffice-is libreoffice-ka libreoffice-kab libreoffice-kk libreoffice-km libreoffice-kmr-latn libreoffice-kn libreoffice-kok libreoffice-ks libreoffice-lb libreoffice-lo libreoffice-lt libreoffice-lv libreoffice-mai libreoffice-mk libreoffice-ml libreoffice-mn libreoffice-mni libreoffice-mr libreoffice-my libreoffice-nb libreoffice-ne libreoffice-nl libreoffice-nn libreoffice-nr libreoffice-nso libreoffice-oc libreoffice-om libreoffice-or libreoffice-pa-in libreoffice-pl libreoffice-ro libreoffice-rw libreoffice-sa-in libreoffice-sat libreoffice-sd libreoffice-si libreoffice-sid libreoffice-sk libreoffice-sl libreoffice-sq libreoffice-sr libreoffice-sr-latn libreoffice-ss libreoffice-st libreoffice-sv libreoffice-sw-tz libreoffice-szl libreoffice-ta libreoffice-te libreoffice-tg libreoffice-th libreoffice-tn libreoffice-tr libreoffice-ts libreoffice-tt libreoffice-ug libreoffice-uk libreoffice-uz libreoffice-ve libreoffice-vec libreoffice-vi libreoffice-xh libreoffice-zu"
+
 APP=libreoffice-"$LOREL"
 BIN="libreoffice" #CHANGE THIS IF THE NAME OF THE BINARY IS DIFFERENT FROM "$APP" (for example, the binary of "obs-studio" is "obs")
-DEPENDENCES="" #SYNTAX: "APP1 APP2 APP3 APP4...", LEAVE BLANK IF NO OTHER DEPENDENCIES ARE NEEDED
+DEPENDENCES="$add_italian $add_european $add_standard $add_all"
+DEPENDENCES=$(echo "$DEPENDENCES" | sed -- "s/libreoffice-/libreoffice-$LOREL-/g")
 #BASICSTUFF="binutils debugedit gzip"
 #COMPILERS="base-devel"
 
