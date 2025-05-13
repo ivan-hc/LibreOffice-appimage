@@ -1,2 +1,10 @@
-https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still_24.8.7-1-archimage4.3-x86_64.AppImage
-https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh_25.2.3-3-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still-all_24.8.7-1-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still-base_24.8.7-1-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still-european_24.8.7-1-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still-italian_24.8.7-1-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-still/LibreOffice-still-standard_24.8.7-1-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh-all_25.2.3-3-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh-base_25.2.3-3-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh-european_25.2.3-3-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh-italian_25.2.3-3-archimage4.3-x86_64.AppImage
+https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-fresh/LibreOffice-fresh-standard_25.2.3-3-archimage4.3-x86_64.AppImage
