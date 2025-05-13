@@ -144,6 +144,31 @@ fi
 
 cd ..
 
+#############################################################################
+#	EXTRACT PACKAGES
+#############################################################################
+
+_extract_main_package() {
+	mkdir -p base
+	rm -Rf ./base/*
+	pkg_full_path=$(find ./archlinux -type f -name "$APP-*zst")
+	if [ "$(echo "$pkg_full_path" | wc -l)" = 1 ]; then
+		pkg_full_path=$(find ./archlinux -type f -name "$APP-*zst")
+	else
+		for p in $pkg_full_path; do
+			if tar fx "$p" .PKGINFO -O | grep -q "pkgname = $APP$"; then
+				pkg_full_path="$p"
+			fi
+		done
+	fi
+	[ -z "$pkg_full_path" ] && echo "💀 ERROR: no package found for \"$APP\", operation aborted!" && exit 0
+	tar fx "$pkg_full_path" -C ./base/
+	VERSION=$(cat ./base/.PKGINFO | grep pkgver | cut -c 10- | sed 's@.*:@@')
+	mkdir -p deps
+}
+
+_extract_main_package
+
 # Add languages (if available)
 rsync -av ./archlinux/.junest/usr/lib/libreoffice/program/* ./"$APP".AppDir/.junest/usr/lib/libreoffice/program/
 rsync -av ./archlinux/.junest/usr/lib/libreoffice/share/* ./"$APP".AppDir/.junest/usr/lib/libreoffice/share/
