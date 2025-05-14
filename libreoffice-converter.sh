@@ -26,7 +26,8 @@ _convert_to_appimage() {
 	cd "$variant" || exit 1
 
 	curl -#Lo "$version" "https://appimages.libreitalia.org/$version" || exit 1
-	chmod a+x ./"$version" && ./"$version" --appimage-extract
+	echo "Extracting the AppImage, please wait..."
+	chmod a+x ./"$version" && ./"$version" --appimage-extract 1>/dev/null
 	rm -f "$version"
 
 	FILENAME=$(echo "$version" | sed -- "s/$release/$variant-$release/g")
