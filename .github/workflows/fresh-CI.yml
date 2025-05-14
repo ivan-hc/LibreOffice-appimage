@@ -1,4 +1,4 @@
-name: FRESH (JuNest)
+name: FRESH - Unofficial Archimages (JuNest)
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
@@ -74,10 +74,10 @@ jobs:
         - name: release
           uses: marvinpinto/action-automatic-releases@latest
           with:
-            title: LibreOffice FRESH
-            automatic_release_tag: continuous-fresh
+            title: LibreOffice (JuNest) FRESH
+            automatic_release_tag: continuous-junest-fresh
             prerelease: false
-            draft: false
+            draft: true
             files: |
               *.AppImage*
             repo_token: ${{ secrets.GITHUB_TOKEN }}

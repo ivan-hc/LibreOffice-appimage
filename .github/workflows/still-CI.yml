@@ -1,4 +1,4 @@
-name: STILL (JuNest)
+name: STILL - Unofficial Archimages (JuNest)
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
@@ -74,10 +74,10 @@ jobs:
         - name: release
           uses: marvinpinto/action-automatic-releases@latest
           with:
-            title: LibreOffice STILL
-            automatic_release_tag: continuous-still
+            title: LibreOffice (JuNest) STILL
+            automatic_release_tag: continuous-junest-still
             prerelease: false
-            draft: false
+            draft: true
             files: |
               *.AppImage*
             repo_token: ${{ secrets.GITHUB_TOKEN }}
