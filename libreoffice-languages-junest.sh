@@ -239,7 +239,7 @@ if test -f ./*.AppImage; then rm -Rf ./*archimage*.AppImage; fi
 
 APPNAME=$(cat ./"$APP".AppDir/*.desktop | grep 'Name=' | head -1 | cut -c 6- | sed 's/ /-/g')
 REPO="$APPNAME-appimage"
-TAG="continuous-$LOREL"
+TAG="continuous-junest-$LOREL"
 VERSION="$VERSION"
 UPINFO="gh-releases-zsync|$GITHUB_REPOSITORY_OWNER|$REPO|$TAG|*$LOREL-$LOLP*x86_64.AppImage.zsync"
 
