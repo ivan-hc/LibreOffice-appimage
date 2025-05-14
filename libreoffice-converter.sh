@@ -35,9 +35,7 @@ _convert_to_appimage() {
 	TAG="continuous-$variant"
 	UPINFO="gh-releases-zsync|$GITHUB_REPOSITORY_OWNER|$REPO|$TAG|*$variant*$edition.AppImage.zsync"
 
-	ARCH=x86_64 ./appimagetool --comp zstd --mksquashfs-opt -Xcompression-level --mksquashfs-opt 20 \
-		-u "$UPINFO" \
-		./squashfs-root "$FILENAME"
+	ARCH=x86_64 ./appimagetool -u "$UPINFO" ./squashfs-root "$FILENAME"
 
 	[ -f ./"$FILENAME" ] && rm -Rf squashfs-root || exit 0
 	cd ..
