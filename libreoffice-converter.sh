@@ -43,7 +43,7 @@ _convert_to_appimage() {
 	cd ..
 }
 
-EDITIONS="basic-x86_64 basic.help-x86_64 standard-x86_64 standard.help-x86_64 full-x86_64 full.help-x86_64 basic-x86_64 basic.help-x86_64 standard-x86_64 standard.help-x86_64 full-x86_64 full.help-x86_64"
+EDITIONS="basic-x86_64 basic.help-x86_64 standard-x86_64 standard.help-x86_64 full-x86_64 full.help-x86_64"
 for edition in $EDITIONS; do
 	# Create fresh
 	_release_fresh
