@@ -1,4 +1,4 @@
-name: STILL
+name: STILL (JuNest)
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true

@@ -1,4 +1,4 @@
-name: FRESH
+name: FRESH (JuNest)
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
