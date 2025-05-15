@@ -76,8 +76,8 @@ jobs:
           with:
             title: LibreOffice (JuNest) STILL
             automatic_release_tag: continuous-junest-still
-            prerelease: false
-            draft: true
+            prerelease: true
+            draft: false
             files: |
               *.AppImage*
             repo_token: ${{ secrets.GITHUB_TOKEN }}
