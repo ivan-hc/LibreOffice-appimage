@@ -20,4 +20,4 @@ https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-jun
 https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-junest-fresh/LibreOffice-fresh-european_25.2.4-3-archimage4.3-x86_64.AppImage
 https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-junest-fresh/LibreOffice-fresh-italian_25.2.4-3-archimage4.3-x86_64.AppImage
 https://github.com/ivan-hc/LibreOffice-appimage/releases/download/continuous-junest-fresh/LibreOffice-fresh-standard_25.2.4-3-archimage4.3-x86_64.AppImage
-Mon Jul 14 01:05:58 UTC 2025
+Tue Jul 15 01:05:15 UTC 2025
