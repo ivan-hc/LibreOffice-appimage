@@ -9,7 +9,7 @@ Official AppImages (converted and re-hosted) and Unofficial Archimages of LibreO
 ## Motivation
 The official AppImages are the result of an old script left as a legacy by Antonio Faccioli, and left there, after years, to still produce packages that depend on the old and obsolete FUSE2.
 
-The official AppImages are also not compatible with and AppImageUpdate specifications.
+The official AppImages are also not compatible with AppImageUpdate specifications.
 
 Their conversion solves the above problems, waiting for them to be solved upstream.
 
