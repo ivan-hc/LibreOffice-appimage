@@ -16,7 +16,50 @@ Their conversion solves the above problems, waiting for them to be solved upstre
 ## MUSL
 Both the official AppImages and those converted from the originals do not support MUSL. For those systems rely on the unofficial Archimages present in the "releases" section and marked as "pre-release".
 
-NOTE: the unofficial Archimages can be installed in AM and AppMan via the `-e` option, while the AppImages converted from the originals can be installed via the `-i` option.
+--------------------------------------------------
+
+## How to create a single-language Archimage
+
+This repository distributes LibreOffice in Italian (my language) for reference.
+
+To create a package with your own language, for example, if you want an AppImage in Spanish:
+1. Change the value of this line https://github.com/ivan-hc/LibreOffice-appimage/blob/c71b16778c70a4f786372f093510eab44db80bc2/libreoffice-languages-junest.sh#L13 (the variable name doesn't matter, just its value) to that of a LibreOffice language package in the Arch Linux repositories, of your choice. From
+```
+add_italian="libreoffice-it"
+```
+to
+```
+add_italian="libreoffice-es"
+```
+2. Add a new line between these two https://github.com/ivan-hc/LibreOffice-appimage/blob/c71b16778c70a4f786372f093510eab44db80bc2/libreoffice-languages-junest.sh#L20-L21 `LOLP=your-language` to change the default value of $LOLP. (currently `italian`) and add your reference value in the AppImage name and delta update info. From
+```
+elif [ "$LOLP" = italian ]; then
+	DEPENDENCES="$add_italian"
+```
+to
+```
+elif [ "$LOLP" = italian ]; then
+	LOLP="spanish"
+	DEPENDENCES="$add_italian"
+```
+3. At this point, you can optionally disable all subsequent releases. Remove https://github.com/ivan-hc/LibreOffice-appimage/blob/c71b16778c70a4f786372f093510eab44db80bc2/.github/workflows/fresh-CI.yml#L43-L56 and https://github.com/ivan-hc/LibreOffice-appimage/blob/c71b16778c70a4f786372f093510eab44db80bc2/.github/workflows/still-CI.yml#L43-L56 from your workflows.
+4. Make sure your fork has permissions to create releases, then start the workflow you prefer, and disable the ones you don't.
+
+## Installing your fork via AM/AppMan
+Use the `-e` or `extra` option to install your AppImage, allowing updates and all the benefits AM/AppMan can offer.
+
+In the previous example, we used Spanish as the reference language. So, here's how to install your own fork of LibreOffice Archimage via "AM", system wide...
+```
+am -e https://github.com/YOUR-USER/LibreOffice-appimage libreoffice spanish
+```
+...or locally
+```
+am -e --user https://github.com/YOUR-USER/LibreOffice-appimage libreoffice spanish
+```
+...or via AppMan
+```
+appman -e https://github.com/YOUR-USER/LibreOffice-appimage libreoffice spanish
+```
 
 ------------------------------------------------------------------------
 
