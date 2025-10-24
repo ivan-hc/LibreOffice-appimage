@@ -211,7 +211,7 @@ _remove_more_bloatwares() {
 
 _enable_mountpoints_for_the_inbuilt_bubblewrap() {
 	mkdir -p ./"$APP".AppDir/.junest/home
-	bind_dirs=$(grep "_dirs=" ./"$APP"./AppRun | tr '" ' '\n' | grep "/" | sort | xargs)
+	bind_dirs=$(grep "_dirs=" ./"$APP".AppDir/AppRun | tr '" ' '\n' | grep "/" | sort | xargs)
 	for d in $bind_dirs; do mkdir -p ./"$APP".AppDir/.junest"$d"; done
 	mkdir -p ./"$APP".AppDir/.junest/run/user
 	rm -f ./"$APP".AppDir/.junest/etc/localtime && touch ./"$APP".AppDir/.junest/etc/localtime
