@@ -213,8 +213,8 @@ _enable_mountpoints_for_the_inbuilt_bubblewrap() {
 	mkdir -p ./"$APP".AppDir/.junest/home
 	mkdir -p ./"$APP".AppDir/.junest/media
 	mkdir -p ./"$APP".AppDir/.junest/usr/lib/locale
-	mkdir -p ./"$APP".AppDir/.junest/usr/share/fonts
-	mkdir -p ./"$APP".AppDir/.junest/usr/share/themes
+	share_dirs="egl fonts glvnd nvidia themes vulkan"
+	for d in $share_dirs; do mkdir -p ./"$APP".AppDir/.junest/usr/share/"$d"; done
 	mkdir -p ./"$APP".AppDir/.junest/run/media
 	mkdir -p ./"$APP".AppDir/.junest/run/user
 	rm -f ./"$APP".AppDir/.junest/etc/localtime && touch ./"$APP".AppDir/.junest/etc/localtime
