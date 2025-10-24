@@ -86,9 +86,9 @@ _bypass_signature_check_level() {
 
 _install_junest() {
 	echo "-----------------------------------------------------------------------------"
-	echo "◆ Clone JuNest from https://github.com/fsquillace/junest"
+	echo "◆ Clone JuNest from https://github.com/ivan-hc/junest"
 	echo "-----------------------------------------------------------------------------"
-	git clone https://github.com/fsquillace/junest.git ./.local/share/junest
+	git clone https://github.com/ivan-hc/junest.git ./.local/share/junest
 	echo "-----------------------------------------------------------------------------"
 	echo "◆ Downloading JuNest archive from https://github.com/ivan-hc/junest"
 	echo "-----------------------------------------------------------------------------"
@@ -248,4 +248,4 @@ UPINFO="gh-releases-zsync|$GITHUB_REPOSITORY_OWNER|$REPO|$TAG|*$LOREL-$LOLP*x86_
 
 ARCH=x86_64 ./appimagetool --comp zstd --mksquashfs-opt -Xcompression-level --mksquashfs-opt 20 \
 	-u "$UPINFO" \
-	./"$APP".AppDir "$APPNAME"-"$LOREL"-"$LOLP"_"$VERSION"-archimage4.3-x86_64.AppImage
+	./"$APP".AppDir "$APPNAME"-"$LOREL"-"$LOLP"_"$VERSION"-archimage4.9-x86_64.AppImage
