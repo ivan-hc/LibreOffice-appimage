@@ -210,16 +210,13 @@ _remove_more_bloatwares() {
 }
 
 _enable_mountpoints_for_the_inbuilt_bubblewrap() {
-	mkdir -p ./"$APP".AppDir/.junest/home
-	mkdir -p ./"$APP".AppDir/.junest/media
-	mkdir -p ./"$APP".AppDir/.junest/usr/lib/locale
-	share_dirs="egl fonts glvnd nvidia themes vulkan"
-	for d in $share_dirs; do mkdir -p ./"$APP".AppDir/.junest/usr/share/"$d"; done
-	mkdir -p ./"$APP".AppDir/.junest/run/media
-	mkdir -p ./"$APP".AppDir/.junest/run/user
-	rm -f ./"$APP".AppDir/.junest/etc/localtime && touch ./"$APP".AppDir/.junest/etc/localtime
-	[ ! -f ./"$APP".AppDir/.junest/etc/asound.conf ] && touch ./"$APP".AppDir/.junest/etc/asound.conf
-	[ ! -e ./"$APP".AppDir/.junest/usr/share/X11/xkb ] && rm -f ./"$APP".AppDir/.junest/usr/share/X11/xkb && mkdir -p ./"$APP".AppDir/.junest/usr/share/X11/xkb
+	mkdir -p ./"$APP"./.junest/home
+	bind_dirs=$(grep "_dirs=" ./"$APP"./AppRun | tr '" ' '\n' | grep "/" | sort | xargs)
+	for d in $bind_dirs; do mkdir -p ./"$APP"./.junest"$d"; done
+	mkdir -p ./"$APP"./.junest/run/user
+	rm -f ./"$APP"./.junest/etc/localtime && touch ./"$APP"./.junest/etc/localtime
+	[ ! -f ./"$APP"./.junest/etc/asound.conf ] && touch ./"$APP"./.junest/etc/asound.conf
+	[ ! -e ./"$APP"./.junest/usr/share/X11/xkb ] && rm -f ./"$APP"./.junest/usr/share/X11/xkb && mkdir -p ./"$APP"./.junest/usr/share/X11/xkb && sed -i -- 's# /var"$# /usr/share/X11/xkb /var"#g' ./"$APP"./AppRun
 }
 
 # Fix libcurl
