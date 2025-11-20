@@ -163,5 +163,4 @@ _appimagetool() {
 	fi
 }
 
-ARCH=x86_64 _appimagetool -u "$UPINFO" \
-	AppDir "$APPNAME"-"$LOREL"-"$LOLP"_"$VERSION"-archimage5.0-x86_64.AppImage
+ARCH=x86_64 _appimagetool -u "$UPINFO" AppDir "$APPNAME"-"$LOREL"-"$LOLP"_"$VERSION"-"$ARCHIMAGE_VERSION"-x86_64.AppImage
