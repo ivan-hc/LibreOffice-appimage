@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export ARCHIMAGE_VERSION="archimage5.0"
+
 if [ ! -f ./libreoffice-junest.sh ] && [ ! -d AppDir/.junest/usr/lib/libreoffice/program ] && [ ! -d archlinux/.junest/usr/lib/libreoffice/program ] && [ ! -f ./version ]; then
 	exit 0
 fi
