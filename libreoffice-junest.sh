@@ -27,7 +27,7 @@ elif [ "$LOLP" = all ]; then
 	DEPENDENCES="$add_all"
 fi
 
-#DEPENDENCES="$DEPENDENCES jre-openjdk"
+DEPENDENCES="$DEPENDENCES jre-openjdk"
 DEPENDENCES=$(echo "$DEPENDENCES" | sed -- "s/libreoffice-/libreoffice-$LOREL-/g")
 #BASICSTUFF="binutils debugedit gzip"
 #COMPILERS="base-devel"
