@@ -7,7 +7,6 @@
 [ -z "$LOLP" ] && LOLP="base"
 
 APP="libreoffice-$LOREL"
-export APP
 BIN="libreoffice" #CHANGE THIS IF THE NAME OF THE BINARY IS DIFFERENT FROM "$APP" (for example, the binary of "obs-studio" is "obs")
 
 # Language packs
