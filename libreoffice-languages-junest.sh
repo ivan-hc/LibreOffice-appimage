@@ -12,7 +12,7 @@ fi
 # Determine if language pack set is "base", "standard" or "full"
 [ -z "$LOLP" ] && LOLP="base"
 
-APP=libreoffice-"$LOREL"
+APP="libreoffice-$LOREL"
 BIN="libreoffice" #CHANGE THIS IF THE NAME OF THE BINARY IS DIFFERENT FROM "$APP" (for example, the binary of "obs-studio" is "obs")
 
 # Language packs
