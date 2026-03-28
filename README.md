@@ -1,5 +1,5 @@
 # LibreOffice-appimage
-Official AppImages (converted and re-hosted) and Unofficial Archimages of LibreOffice, without libfuse2 dependency and full support for AppImageUpdate tools.
+Unofficial Archimages of LibreOffice, without libfuse2 dependency and full support for AppImageUpdate tools.
 
 --------------------------------------------------
 ### NOTE: This wrapper is not verified by, affiliated with, or supported by LibreOffice.
@@ -11,7 +11,11 @@ The official AppImages are the result of an old script left as a legacy by Anton
 
 The official AppImages are also not compatible with AppImageUpdate specifications.
 
-Their conversion solves the above problems, waiting for them to be solved upstream.
+### NOTE: As of March 28, 2026, this repository no longer handles the conversion of official AppImages to modern AppImages. Builds are now built from scratch and based on Antoni Faccioli's method, with improvements to overcome the limitations of upstream AppImages.
+
+### See https://github.com/Portable-Linux-Apps/LibreOffice-appimage
+
+This repository is oriented towards Archimage only.
 
 ## MUSL
 Both the official AppImages and those converted from the originals do not support MUSL. For those systems rely on the unofficial Archimages present in the "releases" section and marked as "pre-release".
