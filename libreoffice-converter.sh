@@ -3,7 +3,7 @@
 # Download appimagetool
 if [ ! -f ./appimagetool ]; then
 	echo "-----------------------------------------------------------------------------"
-	echo "◆ Downloading \"appimagetool\" from https://github.com/AppImage/appimagetool"
+	echo "◆ Downloading \"appimagetool\" from https://github.com/ivan-hc/appimagetool"
 	echo "-----------------------------------------------------------------------------"
 	curl -#Lo appimagetool https://github.com/ivan-hc/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage && chmod a+x appimagetool
 fi
