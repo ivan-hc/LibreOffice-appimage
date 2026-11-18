@@ -27,7 +27,7 @@ elif [ "$LOLP" = all ]; then
 	DEPENDENCES="$add_all"
 fi
 
-DEPENDENCES="$DEPENDENCES jre-openjdk"
+DEPENDENCES="$DEPENDENCES jre-openjdk nss"
 DEPENDENCES=$(echo "$DEPENDENCES" | sed -- "s/libreoffice-/libreoffice-$LOREL-/g")
 #BASICSTUFF="binutils debugedit gzip"
 #COMPILERS="base-devel"
@@ -42,7 +42,7 @@ LIBSAVED="gdk-pixbuf"
 # Some keywords and paths are already set. Remove them if you consider them necessary for the AppImage to function properly.
 ETC_REMOVED="makepkg.conf pacman"
 BIN_REMOVED="gcc"
-LIB_REMOVED="gcc libgallium libgo.so libLLVM"
+LIB_REMOVED="gcc libfreebl libgallium libgo.so libLLVM libsoftokn nss pkcs11"
 PYTHON_REMOVED="__pycache__/"
 SHARE_REMOVED="gcc icons/AdwaitaLegacy icons/Adwaita/cursors/ terminfo"
 
